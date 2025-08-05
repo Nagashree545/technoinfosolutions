@@ -1,32 +1,21 @@
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import CTASection from "./Components/CTASection";
-import Features from "./Components/Feature";
-import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import NewsSection from "./Components/NewSection";
-import Services from "./Components/Services";
-import Stats from "./Components/Stats";
-import Testimonials from "./Components/Testimonials";
-import WhyChooseUs from "./Components/WhyChooseUs";
+import AboutUsPAge from "./Components/AboutUsPage";
+import Footer from "./Components/Footer";
+import HomePage from "./Components/HomePage";
 
 
-export default function Home() {
+function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Hero />
-      <Features />
-      <Stats />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <NewsSection />
-      <CTASection />
-      <About />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUsPAge />} />
+      </Routes>
       <Footer />
-    </div>
-  )
+    </Router>
+  );
 }
+
+export default App;

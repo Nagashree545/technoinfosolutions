@@ -18,7 +18,7 @@ export default function Header() {
           <a href="#home" className={styles.navLink}>
             Home
           </a>
-          <a href="#about" className={styles.navLink}>
+          <a href="/about" className={styles.navLink}>
             About Us
           </a>
           <a href="#services" className={styles.navLink}>
