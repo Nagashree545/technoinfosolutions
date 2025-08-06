@@ -15,7 +15,7 @@ export default function Header() {
         </div>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
-          <a href="#home" className={styles.navLink}>
+          <a href="/" className={styles.navLink}>
             Home
           </a>
           <a href="/about" className={styles.navLink}>
