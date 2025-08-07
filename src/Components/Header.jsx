@@ -24,7 +24,7 @@ export default function Header() {
           <a href="#services" className={styles.navLink}>
             Services
           </a>
-          <a href="#contact" className={styles.navLink}>
+          <a href="/Contact" className={styles.navLink}>
             Contact
           </a>
         </nav>
