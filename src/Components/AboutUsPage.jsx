@@ -184,44 +184,7 @@ const AboutUsPAge = () => {
         </div>
       </section>
 <WhyChooseUs/>
-      {/* Team Section */}
-      <section className={styles.team}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Leadership Team</h2>
-          <div className={styles.teamGrid}>
-            <div className={styles.teamCard}>
-              <div className={styles.teamImage}>
-                <img src="/placeholder.svg?height=200&width=200" alt="CEO" />
-              </div>
-              <h4 className={styles.teamName}>John Anderson</h4>
-              <p className={styles.teamRole}>Chief Executive Officer</p>
-              <p className={styles.teamBio}>
-                15+ years in enterprise technology solutions with expertise in digital transformation.
-              </p>
-            </div>
-            <div className={styles.teamCard}>
-              <div className={styles.teamImage}>
-                <img src="/placeholder.svg?height=200&width=200" alt="CTO" />
-              </div>
-              <h4 className={styles.teamName}>Sarah Chen</h4>
-              <p className={styles.teamRole}>Chief Technology Officer</p>
-              <p className={styles.teamBio}>
-                Cloud architecture specialist with 12+ years in cybersecurity and infrastructure.
-              </p>
-            </div>
-            <div className={styles.teamCard}>
-              <div className={styles.teamImage}>
-                <img src="/placeholder.svg?height=200&width=200" alt="COO" />
-              </div>
-              <h4 className={styles.teamName}>Michael Rodriguez</h4>
-              <p className={styles.teamRole}>Chief Operations Officer</p>
-              <p className={styles.teamBio}>
-                Operations excellence leader with proven track record in scaling tech companies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+   
 
       {/* CTA Section */}
       <section className={styles.cta}>
