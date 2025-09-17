@@ -1,57 +1,95 @@
 .helpWrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  line-height: 1.7;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fb;
   color: #333;
+  margin-top: 30px;
 }
 
-.title {
+/* Header */
+.header {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  color: #0d6efd;
+  margin-bottom: 3rem;
 }
 
-.intro {
-  text-align: center;
-  margin-bottom: 40px;
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
   font-size: 1.1rem;
-  color: #444;
-}
-
-.supportSection {
-  margin-bottom: 25px;
-  padding: 15px 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  animation: fadeIn 0.7s ease;
-}
-
-.supportSection:hover {
-  transform: translateY(-4px);
-}
-
-h2 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: #222;
-}
-
-p {
-  font-size: 1rem;
   color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cards Base */
+.card {
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Colorful Gradients for Each Card */
+.card1 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+.card2 {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+.card3 {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+.card4 {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+.card5 {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #000;
+}
+.card6 {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+.card7 {
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+.card8 {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
 }

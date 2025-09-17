@@ -2,77 +2,75 @@ import React from "react";
 import styles from "../Styles/Helpandsupport.module.css";
 
 export default function HelpSupport() {
+  const supportItems = [
+    {
+      icon: "🛠",
+      title: "Technical Support",
+      desc: "Get quick help for hardware or software issues with on-site or remote support.",
+      color: "card1",
+    },
+    {
+      icon: "📝",
+      title: "Service Booking",
+      desc: "Easily schedule repair or maintenance by phone or our online form.",
+      color: "card2",
+    },
+    {
+      icon: "🔧",
+      title: "Warranty & Repairs",
+      desc: "Guidance for warranty claims and repairs with invoice and serial number.",
+      color: "card3",
+    },
+    {
+      icon: "🚚",
+      title: "Order & Delivery",
+      desc: "Stay updated with your order and track deliveries in real-time.",
+      color: "card4",
+    },
+    {
+      icon: "💾",
+      title: "Data Backup & Recovery",
+      desc: "Protect important files with secure backup and recovery options.",
+      color: "card5",
+    },
+    {
+      icon: "💻",
+      title: "Software Support",
+      desc: "Setup, update, and troubleshoot software to keep you running smoothly.",
+      color: "card6",
+    },
+    {
+      icon: "❓",
+      title: "Quick Tips & FAQs",
+      desc: "Find answers instantly with our easy-to-use FAQ section.",
+      color: "card7",
+    },
+    {
+      icon: "🕘",
+      title: "Business Hours",
+      desc: "Available Mon–Sat (10 AM – 8 PM). Closed Sundays & holidays.",
+      color: "card8",
+    },
+  ];
+
   return (
     <div className={styles.helpWrapper}>
-      <h1 className={styles.title}>Help & Support</h1>
-      <p className={styles.intro}>
-        We’re here to help! Whether you need support with a refurbished laptop
-        purchase, service booking, or have technical issues, our team is ready
-        to assist you.
-      </p>
-
-   
-
-      <div className={styles.supportSection}>
-        <h2>🛠 Technical Support</h2>
+      <header className={styles.header}>
+        <h1>Help & Support</h1>
         <p>
-          Our technicians can diagnose and resolve hardware or software
-          problems. On-site and remote support options available.
+          We’re here to help you — from technical issues to service bookings,
+          our team is always ready to assist.
         </p>
-      </div>
+      </header>
 
-      <div className={styles.supportSection}>
-        <h2>📝 Service Booking</h2>
-        <p>
-          To schedule a repair or maintenance service, call us or fill out our
-          Service Request Form online.
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>🔧 Warranty & Repairs</h2>
-        <p>
-          Need help with warranty claims or repairs? Contact us with your invoice
-          and serial number, and we’ll guide you through the process.
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>🚚 Order & Delivery Support</h2>
-        <p>
-          Questions about your order or delivery status? We’ll keep you updated
-          and help track your order.
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>💾 Data Backup & Recovery</h2>
-        <p>
-          Worried about data loss? We offer secure data backup and recovery
-          services to keep your information safe.
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>💻 Software Support</h2>
-        <p>
-          Need help installing or troubleshooting software? We provide setup,
-          updates, and problem-solving for commonly used software.
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>❓ Quick Tips & FAQs</h2>
-        <p>
-          Check out our FAQ section for common questions and quick solutions:
-          [Link to FAQ page]
-        </p>
-      </div>
-
-      <div className={styles.supportSection}>
-        <h2>🕘 Business Hours</h2>
-        <p>Monday – Saturday: 10:00 AM – 8:00 PM</p>
-        <p>Closed on Sundays and Public Holidays</p>
+      <div className={styles.grid}>
+        {supportItems.map((item, index) => (
+          <div key={index} className={`${styles.card} ${styles[item.color]}`}>
+            <span className={styles.icon}>{item.icon}</span>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
