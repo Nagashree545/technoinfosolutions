@@ -22,7 +22,7 @@ export default function HomePage() {
       <Testimonials />
       <NewsSection />
       <CTASection />
-      <About />
+      {/* <About /> */}
       <Contact />
     </div>
   )

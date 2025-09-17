@@ -48,9 +48,7 @@ export default function Footer() {
                 <li>
                   <a href="#services">Services</a>
                 </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
+               
               </ul>
             </div>
 
@@ -58,16 +56,22 @@ export default function Footer() {
               <h3>Support</h3>
               <ul>
                 <li>
-                  <a href="#">Help Center</a>
+                  <a href="/support">Help Center</a>
                 </li>
-                <li>
+                  <li>
+                  <a href="/refudnpolicy">Refund Policy</a>
+                </li>
+                  <li>
+                  <a href="/privacypolicy">Privacy Policy</a>
+                </li>
+                {/* <li>
                   <a href="#">Documentation</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>
-                </li>
+                </li> */}
                 <li>
-                  <a href="#">Terms of Service</a>
+                  <a href="/terms">Terms of Service</a>
                 </li>
               </ul>
             </div>
