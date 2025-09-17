@@ -45,12 +45,7 @@ export default function HelpSupport() {
       desc: "Find answers instantly with our easy-to-use FAQ section.",
       color: "card7",
     },
-    {
-      icon: "🕘",
-      title: "Business Hours",
-      desc: "Available Mon–Sat (10 AM – 8 PM). Closed Sundays & holidays.",
-      color: "card8",
-    },
+ 
   ];
 
   return (
