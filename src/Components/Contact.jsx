@@ -103,21 +103,21 @@ export default function Contact() {
               <div className={styles.infoIcon}>📧</div>
               <div>
                 <h3>Email</h3>
-                <p>info@technoinfoline.com</p>
+                <p>technoinfolinesolutions@gmail.com</p>
               </div>
             </div>
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📞</div>
               <div>
                 <h3>Phone</h3>
-                <p>+91 XXXXXXXXXX</p>
+                <p>+91 8217399673</p>
               </div>
             </div>
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📍</div>
               <div>
                 <h3>Address</h3>
-                <p>123 Tech Street, Digital City, TC 12345</p>
+                <p>banglore</p>
               </div>
             </div>
           </div>
