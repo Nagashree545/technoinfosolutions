@@ -8,6 +8,7 @@ import TermsAndConditions from "./Components/TermsandCondition";
 import HelpSupport from "./Components/HelpandSup[port";
 import ReturnRefundPolicy from "./Components/RefundPolicy";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
+import Services from "./Components/Services";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/support" element={<HelpSupport />} />
         <Route path="/refudnpolicy" element={<ReturnRefundPolicy />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
+        <Route path="/services" element={<Services/>} />
 
       </Routes>
       <Footer />

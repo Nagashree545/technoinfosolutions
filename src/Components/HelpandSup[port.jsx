@@ -39,12 +39,7 @@ export default function HelpSupport() {
       desc: "Setup, update, and troubleshoot software to keep you running smoothly.",
       color: "card6",
     },
-    {
-      icon: "❓",
-      title: "Quick Tips & FAQs",
-      desc: "Find answers instantly with our easy-to-use FAQ section.",
-      color: "card7",
-    },
+  
  
   ];
 

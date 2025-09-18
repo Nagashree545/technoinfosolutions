@@ -10,37 +10,38 @@ const services = [
   {
     icon: "🔒",
     title: "Cyber Security",
-    description: "Advanced security measures to protect your business from cyber threats and ensure data integrity.",
+    description:
+      "Advanced security measures to protect your business from cyber threats and ensure data integrity.",
   },
   {
     icon: "☁️",
     title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services to modernize your business operations.",
+    description:
+      "Scalable cloud infrastructure and migration services to modernize your business operations.",
   },
   {
     icon: "💻",
     title: "Refurbished Laptops & Desktop",
-    description: "High-quality refurbished computers that deliver excellent performance at affordable prices.",
-  },
-  {
-    icon: "🛒",
-    title: "Sales and Services",
-    description: "Complete sales support and after-sales services for all your technology needs.",
+    description:
+      "High-quality refurbished computers that deliver excellent performance at affordable prices.",
   },
   {
     icon: "🔧",
     title: "Hardware Repair",
-    description: "Expert hardware repair services to keep your devices running smoothly and efficiently.",
+    description:
+      "Expert hardware repair services to keep your devices running smoothly and efficiently.",
   },
   {
     icon: "💡",
     title: "IT Consulting Support",
-    description: "Strategic IT consulting to help you make informed technology decisions for your business.",
+    description:
+      "Strategic IT consulting to help you make informed technology decisions for your business.",
   },
   {
     icon: "⚙️",
     title: "System Integration",
-    description: "Seamless integration of various systems and technologies to optimize your workflow.",
+    description:
+      "Seamless integration of various systems and technologies to optimize your workflow.",
   },
 ]
 
@@ -50,7 +51,9 @@ export default function Services() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Our Services</h2>
-          <p className={styles.subtitle}>Comprehensive IT solutions tailored to meet your business needs</p>
+          <p className={styles.subtitle}>
+            Comprehensive IT solutions tailored to meet your business needs
+          </p>
         </div>
 
         <div className={styles.grid}>

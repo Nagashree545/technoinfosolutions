@@ -73,17 +73,6 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-
-        <div className={styles.clientLogos}>
-          <div className={styles.logoGrid}>
-            <div className={styles.clientLogo}>🏢 TechCorp</div>
-            <div className={styles.clientLogo}>🏭 Global Ent.</div>
-            <div className={styles.clientLogo}>🚀 StartupXYZ</div>
-            <div className={styles.clientLogo}>🏪 RetailPro</div>
-            <div className={styles.clientLogo}>🏥 HealthTech</div>
-            <div className={styles.clientLogo}>🎓 EduSoft</div>
-          </div>
-        </div>
       </div>
     </section>
   )
