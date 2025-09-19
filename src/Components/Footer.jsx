@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.links}>
-            <div className={styles.linkGroup}>
+            {/* <div className={styles.linkGroup}>
               <h3>Services</h3>
               <ul>
                 <li>
@@ -34,19 +34,19 @@ export default function Footer() {
                   <a href="#services">Hardware Repair</a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div className={styles.linkGroup}>
               <h3>Company</h3>
               <ul>
                 <li>
-                  <a href="#about">About Us</a>
+                  <a href="/about">About Us</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="/Contact">Contact</a>
                 </li>
                 <li>
-                  <a href="#services">Services</a>
+                  <a href="/services">Services</a>
                 </li>
                
               </ul>
@@ -64,12 +64,7 @@ export default function Footer() {
                   <li>
                   <a href="/privacypolicy">Privacy Policy</a>
                 </li>
-                {/* <li>
-                  <a href="#">Documentation</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li> */}
+             
                 <li>
                   <a href="/terms">Terms of Service</a>
                 </li>

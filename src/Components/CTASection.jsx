@@ -45,7 +45,7 @@ export default function CTASection() {
 
             <div className={styles.urgency}>
               <span className={styles.urgencyIcon}>⏰</span>
-              <span>Limited time offer - Book your consultation this month and get 20% off your first project!</span>
+              <span>Limited time offer</span>
             </div>
           </div>
         </div>
