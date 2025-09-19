@@ -1,11 +1,12 @@
-
 import React, { useState } from "react";
 import styles from "../Styles/Contact.module.css";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",   // ✅ Added phone
     subject: "",
     message: ""
   });
@@ -23,6 +24,14 @@ export default function Contact() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
+
+    // ✅ Phone validation
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
@@ -51,11 +60,24 @@ export default function Contact() {
     setSubmitError("");
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log("Form submitted:", formData);
+      // ✅ Send email via EmailJS
+      await emailjs.send(
+        "service_eg91ojn",   // replace with your EmailJS Service ID
+        "template_clvkseo",  // replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,   // ✅ Send phone too
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "REIWarDRbm2Us2r-3"  // replace with your EmailJS Public Key
+      );
+
       setIsSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch (error) {
+      console.error("EmailJS Error:", error);
       setSubmitError("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -98,6 +120,7 @@ export default function Contact() {
         </div>
 
         <div className={styles.content}>
+          {/* Contact Info */}
           <div className={styles.contactInfo}>
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📧</div>
@@ -117,11 +140,12 @@ export default function Contact() {
               <div className={styles.infoIcon}>📍</div>
               <div>
                 <h3>Address</h3>
-                <p>banglore</p>
+                <p>Bangalore</p>
               </div>
             </div>
           </div>
 
+          {/* Contact Form */}
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
               <label htmlFor="name" className={styles.label}>Your Name *</label>
@@ -149,6 +173,21 @@ export default function Contact() {
                 className={`${styles.input} ${errors.email ? styles.error : ""}`}
               />
               {errors.email && <div className={styles.errorMessage}>⚠️ {errors.email}</div>}
+            </div>
+
+            {/* ✅ Phone Input */}
+            <div className={styles.formGroup}>
+              <label htmlFor="phone" className={styles.label}>Phone Number *</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder="Enter your phone number"
+                className={`${styles.input} ${errors.phone ? styles.error : ""}`}
+              />
+              {errors.phone && <div className={styles.errorMessage}>⚠️ {errors.phone}</div>}
             </div>
 
             <div className={styles.formGroup}>

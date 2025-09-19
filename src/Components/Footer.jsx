@@ -1,5 +1,5 @@
-import styles from "../Styles/Footer.module.css"
-
+import styles from "../Styles/Footer.module.css";
+import logo from "../Assets/technoinfologo.png";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -8,12 +8,12 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logo}>
               <div className={styles.logoIcon}>
-                <span>T</span>
+                <img src={logo} />{" "}
               </div>
-              <span className={styles.logoText}>Techno Infoline Solutions</span>
             </div>
             <p className={styles.brandDescription}>
-              Your trusted partner for comprehensive IT solutions and business transformation.
+              Your trusted partner for comprehensive IT solutions and business
+              transformation.
             </p>
           </div>
 
@@ -48,7 +48,6 @@ export default function Footer() {
                 <li>
                   <a href="/services">Services</a>
                 </li>
-               
               </ul>
             </div>
 
@@ -58,13 +57,13 @@ export default function Footer() {
                 <li>
                   <a href="/support">Help Center</a>
                 </li>
-                  <li>
+                <li>
                   <a href="/refudnpolicy">Refund Policy</a>
                 </li>
-                  <li>
+                <li>
                   <a href="/privacypolicy">Privacy Policy</a>
                 </li>
-             
+
                 <li>
                   <a href="/terms">Terms of Service</a>
                 </li>
@@ -75,22 +74,9 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; 2024 Techno Infoline Solutions. All rights reserved.</p>
-          <div className={styles.social}>
-            <a href="#" aria-label="Facebook">
-              📘
-            </a>
-            <a href="#" aria-label="Twitter">
-              🐦
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              💼
-            </a>
-            <a href="#" aria-label="Instagram">
-              📷
-            </a>
-          </div>
+      
         </div>
       </div>
     </footer>
-  )
+  );
 }

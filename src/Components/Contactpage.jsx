@@ -1,64 +1,44 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  Users,
-  Award,
-} from "lucide-react";
-import styles from "../Styles/ContactPage.module.css";
-import Contact from "./Contact";
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Clock, Users, Award } from 'lucide-react';
+import styles from '../Styles/ContactPage.module.css';
+import Contact from './Contact';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("");
+  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus("");
-
+    setSubmitStatus('');
+    
     try {
-      const result = await emailjs.send(
-        "service_eg91ojn", // 🔹 Replace with EmailJS Service ID
-        "template_clvkseo", // 🔹 Replace with EmailJS Template ID
-        formData,
-        "REIWarDRbm2Us2r-3" // 🔹 Replace with EmailJS Public Key
-      );
-
-      if (result.status === 200) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-      }
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
     } catch (error) {
-      console.error("EmailJS Error:", error);
-      setSubmitStatus("error");
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -77,14 +57,15 @@ export default function ContactPage() {
         <div className={styles.maxWidth}>
           {/* Hero Section */}
           <div className={styles.heroSection}>
+            
             <h1 className={styles.heroTitle}>
               Let's Build Something
-              <span className={styles.heroTitleAccent}> Amazing Together</span>
+              <span className={styles.heroTitleAccent}>
+                Amazing Together
+              </span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Ready to transform your business with cutting-edge technology?
-              Let's discuss your project and explore how we can help you achieve
-              your goals.
+              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how we can help you achieve your goals.
             </p>
           </div>
 
@@ -113,65 +94,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Your Phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-
-            <button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
-            </button>
-
-            {submitStatus === "success" && (
-              <p className={styles.success}>
-                <CheckCircle size={16} /> Message sent successfully!
-              </p>
-            )}
-            {submitStatus === "error" && (
-              <p className={styles.error}>
-                <AlertCircle size={16} /> Something went wrong. Please try again.
-              </p>
-            )}
-          </form>
-
-          {/* Optional extra section */}
-          <Contact />
+         <Contact/>
         </div>
       </div>
     </div>

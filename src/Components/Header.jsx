@@ -1,17 +1,17 @@
-import { useState } from "react"
-import styles from "../Styles/Header.module.css"
+import { useState } from "react";
+import styles from "../Styles/Header.module.css";
+import Logo from "../Assets/technoinfologo.png";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <span>T</span>
+            <img src={Logo} />{" "}
           </div>
-          <span className={styles.logoText}>Techno Infoline Solutions</span>
         </div>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
@@ -29,12 +29,15 @@ export default function Header() {
           </a>
         </nav>
 
-        <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className={styles.menuToggle}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
     </header>
-  )
+  );
 }
