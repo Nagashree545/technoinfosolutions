@@ -26,6 +26,19 @@ export default function TermsAndConditions() {
           </p>
         </section>
 
+        {/* ✅ New Section for Desktop, Laptop & Printer Services */}
+        <section className={styles.sectionCard}>
+          <h2>Desktop, Laptop, Printer & Spares Sales and Services</h2>
+          <ul className={styles.customList}>
+            <li>(a) PC Upgrade</li>
+            <li>(b) Hard Disk Recovery</li>
+            <li>(c) Virus & Spyware Removal</li>
+            <li>(d) Home and Office Networking</li>
+            <li>(e) Operating System Install</li>
+            <li>(f) Broken Laptop Repair / Refurbished Laptop Sales</li>
+          </ul>
+        </section>
+
         <section className={styles.sectionCard}>
           <h2>Pricing and Payments</h2>
           <p>
@@ -42,11 +55,11 @@ export default function TermsAndConditions() {
               Refurbished laptops may come with a limited warranty from us,
               typically 90 days, unless otherwise stated.
             </li>
-            <li>Service-related warranties, if any, will be specified in writing.</li>
+            <li>
+              Service-related warranties, if any, will be specified in writing.
+            </li>
           </ul>
         </section>
-
-
 
         {/* ✅ Service Terms & Related Sections */}
         <section className={styles.sectionCard}>
@@ -93,7 +106,9 @@ export default function TermsAndConditions() {
             If you have any questions regarding these Terms & Conditions, feel
             free to reach out to our support team.
           </p>
-          <button className={styles.contactBtn}><a style={{textDecoration:"none"}}>Contact Support</a></button>
+          <button className={styles.contactBtn}>
+            <a style={{ textDecoration: "none" }}>Contact Support</a>
+          </button>
         </div>
       </div>
     </div>
