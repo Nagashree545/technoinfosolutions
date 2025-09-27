@@ -83,7 +83,6 @@ export default function WhyChooseUs() {
               </svg>
             </button>
           </div>
-
           <div className={styles.rightContent}>
             <div className={styles.reasonsGrid}>
               {reasons.map((reason, index) => (
